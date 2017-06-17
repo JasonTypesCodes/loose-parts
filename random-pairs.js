@@ -8,11 +8,14 @@ function randomInt(low, high) {
 }
 
 function locateAssignment(assignments, item, forceExclude = -1) {
+  const direction = randomInt(0, 2) === 0 ? 1 : -1;
+
   while(assignments[item] !== -1 || item === forceExclude){
-    if(item < assignments.length){
-      item++;
-    } else {
-      item = 0;
+    item = item + direction;
+    if(item === assignments.length){
+      item = 0
+    } else if(item === -1) {
+      item = assignments.length - 1;
     }
   }
 
@@ -32,8 +35,8 @@ if(numOfItems === 0) {
   }
 
   while(remaining > 1) {
-    const a = locateAssignment(assignments, randomInt(0, remaining));
-    const b = locateAssignment(assignments, randomInt(0, remaining), a);
+    const a = locateAssignment(assignments, randomInt(0, assignments.length));
+    const b = locateAssignment(assignments, randomInt(0, assignments.length), a);
     
     assignments[a] = b;
     assignments[b] = a;
