@@ -1,0 +1,5 @@
+#!/bin/sh
+
+TODAY=`date "+%F"`
+
+allididon "${TODAY}"
