@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DATE_FMT="%F %H:%m:%S (%a)"
+DATE_FMT="%F %H:%M:%S (%a)"
 
 function format_time {
 	echo $(printf "%.02f" $(echo $1 | sed 's/[^0-9\.0-9]*//g'))
