@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 TOTAL="0.0"
 
