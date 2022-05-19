@@ -16,7 +16,7 @@ else
 		echo "EXAMPLE: idid 3 \"something that took 3 hours\""
 		echo "EXAMPLE: idid 24m \"something that took 24 minutes\""
 		echo "EXAMPLE: idid 1.5h \"something that took one and a half hours\""
-		echo "EXAMPLE: idid 0 \"something that I didn't track the time of\""
+		echo "EXAMPLE: idid \"something that I didn't track the time of\""
 		exit 1
 	else
 		RAW_TIME="$1"
